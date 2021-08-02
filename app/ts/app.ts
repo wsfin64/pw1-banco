@@ -15,10 +15,16 @@
 const contaController = new ContaController();
 contaController.listar();
 
-const clientes = new Clientes();
+const clientes: Clientes = new Clientes();
 
-let cli1:Cliente = new Cliente('Antonio', '88888', '4');
-let cli2:Cliente = new Cliente('Maria', '46464', '6');
+let cli1: Cliente = new Cliente('Antonio', '88888', '4');
+let cli2: Cliente = new Cliente('Maria', '46464', '6');
 clientes.inserir(cli1);
 clientes.inserir(cli2);
+
 clientes.listar().forEach(cliente => console.log(cliente.toString()));
+
+console.log(clientes.pesquisar('46464'));
+clientes.remover('46464');
+clientes.listar().forEach(cliente => console.log(cliente.toString()));
+

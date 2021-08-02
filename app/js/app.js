@@ -18,3 +18,6 @@ let cli2 = new Cliente('Maria', '46464', '6');
 clientes.inserir(cli1);
 clientes.inserir(cli2);
 clientes.listar().forEach(cliente => console.log(cliente.toString()));
+console.log(clientes.pesquisar('46464'));
+clientes.remover('46464');
+clientes.listar().forEach(cliente => console.log(cliente.toString()));

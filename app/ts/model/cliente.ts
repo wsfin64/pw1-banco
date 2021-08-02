@@ -5,9 +5,9 @@ class Cliente {
     private conta: string;
 
     constructor(nome: string, cpf: string, conta:string ) {
-        nome = this.nome;
-        cpf = this.cpf;
-        conta = this.conta;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.conta = conta;
     }
 
     getNome(): string{
